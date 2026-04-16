@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LucideArrowRight } from "lucide-react";
-import { LucideCode2 } from "lucide-react";
-import { LucideDatabase } from "lucide-react";
-import { LucideLayers } from "lucide-react";
-import { LucideNetwork } from "lucide-react";
-import { LucideShieldCheck } from "lucide-react";
-import { LucideZap } from "lucide-react";
-import { LucideGithub } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Database,
+  Layers,
+  Network,
+  ShieldCheck,
+  Zap,
+  Github,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -41,12 +43,12 @@ export default function Home() {
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Link href="/syllabus">View Syllabus</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:bg-white/10">
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Link href="/labs">Browse Labs</Link>
             </Button>
-            <Button asChild variant="ghost" size="lg" className="text-slate-300 hover:text-white">
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Link href="https://github.com/victordeman/distributed-systems" target="_blank">
-                <LucideGithub className="mr-2 h-5 w-5" />
+                <Github className="mr-2 h-5 w-5" />
                 GitHub Repo
               </Link>
             </Button>
@@ -65,7 +67,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideCode2 className="h-10 w-10 text-blue-500" />
+                <Code2 className="h-10 w-10 text-blue-500" />
                 <CardTitle className="mt-4">Python-Focused</CardTitle>
               </CardHeader>
               <CardContent>
@@ -77,7 +79,7 @@ export default function Home() {
 
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideZap className="h-10 w-10 text-yellow-500" />
+                <Zap className="h-10 w-10 text-yellow-500" />
                 <CardTitle className="mt-4">Hands-on Labs</CardTitle>
               </CardHeader>
               <CardContent>
@@ -89,7 +91,7 @@ export default function Home() {
 
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideLayers className="h-10 w-10 text-purple-500" />
+                <Layers className="h-10 w-10 text-purple-500" />
                 <CardTitle className="mt-4">Raft Consensus</CardTitle>
               </CardHeader>
               <CardContent>
@@ -101,7 +103,7 @@ export default function Home() {
 
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideNetwork className="h-10 w-10 text-green-500" />
+                <Network className="h-10 w-10 text-green-500" />
                 <CardTitle className="mt-4">Real-World Cases</CardTitle>
               </CardHeader>
               <CardContent>
@@ -113,7 +115,7 @@ export default function Home() {
 
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideDatabase className="h-10 w-10 text-red-500" />
+                <Database className="h-10 w-10 text-red-500" />
                 <CardTitle className="mt-4">Practical Storage</CardTitle>
               </CardHeader>
               <CardContent>
@@ -125,7 +127,7 @@ export default function Home() {
 
             <Card className="border-border/50 bg-card/50 transition-all hover:border-primary/50">
               <CardHeader>
-                <LucideShieldCheck className="h-10 w-10 text-indigo-500" />
+                <ShieldCheck className="h-10 w-10 text-indigo-500" />
                 <CardTitle className="mt-4">Fault Tolerance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -148,7 +150,7 @@ export default function Home() {
             </div>
             <div className="flex gap-4">
               <Button asChild variant="default">
-                <Link href="/syllabus">Syllabus <LucideArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link href="/syllabus">Syllabus <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline">
                 <Link href="/labs">Labs</Link>
