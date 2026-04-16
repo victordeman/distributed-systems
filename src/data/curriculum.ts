@@ -241,11 +241,10 @@ export const capstoneProjects: CapstoneProject[] = [
 ];
 
 export const assessmentWeighting = [
-  { item: "Participation", weight: 5 },
-  { item: "Labs & Assignments", weight: 30 },
-  { item: "Quizzes", weight: 25 },
-  { item: "Final Exam", weight: 20 },
-  { item: "Capstone Project", weight: 20 }
+  { item: "In Class Quizzes Participation", weight: 5 },
+  { item: "Labs & Assignments & Capstone Project", weight: 10 },
+  { item: "Quizzes", weight: 5 },
+  { item: "Final Exam", weight: 70 }
 ];
 
 export const resources = {
