@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { LucideMenu, LucideX, LucideShare2, LucideMoon, LucideSun } from "lucide-react"
+import { Menu, X, Share2, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 
@@ -26,7 +26,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <LucideShare2 className="h-6 w-6 text-primary" />
+            <Share2 className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block">
               DS Fundamentals
             </span>
@@ -52,8 +52,8 @@ export function Navbar() {
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            <LucideSun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <LucideMoon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
         </div>
@@ -65,15 +65,15 @@ export function Navbar() {
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-                <LucideSun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <LucideMoon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <LucideX className="h-6 w-6" /> : <LucideMenu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
