@@ -27,156 +27,184 @@ export interface CapstoneProject {
 export const curriculum: Week[] = [
   {
     number: 1,
-    title: "Introduction & Models",
+    title: "Foundations: Introduction, Models & Architecture",
     topics: [
       "What is a distributed system? Why bother?",
       "Basic models (client-server, peer-to-peer)",
-      "Intro to processes/threads (from OS perspective)"
+      "Intro to processes/threads (from OS perspective)",
+      "System architectures: Centralized vs. Decentralized"
     ],
     readings: ["Coulouris Ch. 1", "OS/networks summaries"],
-    labDescription: "Python socket echo server/client; simple multi-threaded server.",
+    labDescription: "Sockets & Threads. Build a multi-threaded echo server. Very guided starter code provided. Modify this working example. Starter code provided on GitHub.",
     starterCodeNote: "Very guided starter code provided."
   },
   {
     number: 2,
-    title: "Networking Basics",
+    title: "Networking: Communication, Protocols & Sockets",
     topics: [
       "Networking basics (IP, TCP/UDP, sockets)",
-      "Simple client-server programming"
+      "Simple client-server programming",
+      "Network performance: Latency vs. Bandwidth",
+      "Encapsulation and layering"
     ],
     readings: ["Coulouris Ch. 2"],
-    labDescription: "Continue with socket programming exercises."
+    labDescription: "Networking Basics. Continue with socket programming exercises. Starter code provided on GitHub."
   },
   {
     number: 3,
-    title: "Concurrency & Failure Models",
+    title: "Concurrency & Failure: Managing Complexity and Crashes",
     topics: [
       "Concurrency & data structures review (locks, queues, lists, hash tables)",
-      "Failure models and partial failures"
+      "Failure models and partial failures",
+      "Handling race conditions in distributed state",
+      "Idempotency in network operations"
     ],
     readings: ["Coulouris Ch. 2 (continued)", "Concurrency guide"],
-    labDescription: "Thread-safe data structures in Python."
+    labDescription: "Concurrency & Failure Models. Thread-safe data structures in Python. Starter code provided on GitHub."
   },
   {
     number: 4,
-    title: "Communication & Remote Calls I",
+    title: "Remote Calls I: RPC Concepts and Implementations",
     topics: [
       "RPC/RMI concepts",
       "Message passing",
-      "Remote call semantics (at-least-once, etc.)"
+      "Remote call semantics (at-least-once, etc.)",
+      "Interface Definition Languages (IDLs)"
     ],
     readings: ["Coulouris Ch. 4"],
-    labDescription: "Build a basic RPC-style service in Python."
+    labDescription: "Remote Procedure Calls I. Build a basic RPC-style service in Python. Starter code provided on GitHub."
   },
   {
     number: 5,
-    title: "Communication & Remote Calls II",
+    title: "Remote Calls II: Serialization, Pub-Sub & Advanced Patterns",
     topics: [
       "Publish-subscribe systems",
-      "Advanced RPC patterns"
+      "Advanced RPC patterns",
+      "Serialization and Deserialization (JSON, Protobuf)",
+      "Asynchronous message passing"
     ],
     readings: ["Coulouris Ch. 4 (continued)"],
-    labDescription: "Implement a simple pub-sub system."
+    labDescription: "Remote Procedure Calls II. Implement a simple pub-sub system. Starter code provided on GitHub."
   },
   {
     number: 6,
-    title: "Naming",
+    title: "Naming: Identification and Location in Distributed Systems",
     topics: [
       "DNS, directories",
-      "Flat vs. hierarchical naming"
+      "Flat vs. hierarchical naming",
+      "Resource discovery mechanisms",
+      "Scalable naming systems"
     ],
     readings: ["Coulouris Ch. 5 (Light reading)"],
-    labDescription: "Implementing a basic directory service."
+    labDescription: "Naming & Directory Services. Implementing a basic directory service. Starter code provided on GitHub."
   },
   {
     number: 7,
-    title: "Time & Clocks",
+    title: "Time & Clocks: Ordering Events in Distributed Systems",
     topics: [
       "Physical vs. logical clocks",
       "Lamport clocks",
-      "Vector clocks (intuition + simple examples)"
+      "Vector clocks (intuition + simple examples)",
+      "Causality and happens-before relationship"
     ],
     readings: ["Coulouris Ch. 6"],
-    labDescription: "Implement vector clocks in Python."
+    labDescription: "Time & Logical Clocks. Implement vector clocks in Python. Starter code provided on GitHub."
   },
   {
     number: 8,
-    title: "Coordination",
+    title: "Coordination: Leader Election, Mutual Exclusion & Global State",
     topics: [
-      "Mutual exclusion",
+      "Mutual exclusion algorithms",
       "Leader election (high-level)",
-      "Snapshots"
+      "Snapshots and consistent global state",
+      "Distributed termination detection"
     ],
     readings: ["Coulouris Ch. 6 (continued)"],
-    labDescription: "Bully algorithm implementation."
+    labDescription: "Coordination & Vector Clocks. Bully algorithm implementation. Starter code provided on GitHub."
   },
   {
     number: 9,
-    title: "Replication & Consistency",
+    title: "Replication & Consistency: Managing State in Large Scale Systems",
     topics: [
       "Replication types (primary-backup, quorum)",
-      "Consistency models + CAP theorem (intuition and trade-offs)"
+      "Consistency models + CAP theorem (intuition and trade-offs)",
+      "Eventual consistency and conflict resolution",
+      "Quorum-based protocols"
     ],
     readings: ["Coulouris Ch. 7"],
-    labDescription: "Simple replicated key-value store."
+    labDescription: "Replication & Consistency. Simple replicated key-value store. Starter code provided on GitHub."
   },
   {
     number: 10,
-    title: "Fault Tolerance & Consensus",
+    title: "Consensus: Reaching Agreement in the Presence of Faults",
     topics: [
       "Failure detectors, reliable broadcast",
       "Consensus: Focus on Raft (practical approach)",
-      "Case studies: Dynamo, Cassandra (high-level)"
+      "Case studies: Dynamo, Cassandra (high-level)",
+      "Safety and Liveness in consensus"
     ],
     readings: ["Raft Paper (Introduction + Safety sections)"],
-    labDescription: "Basic Raft leader election."
+    labDescription: "Fault Tolerance & Consensus. Basic Raft leader election. Starter code provided on GitHub."
   },
   {
     number: 11,
-    title: "Distributed Storage",
+    title: "Distributed Storage: File Systems and Object Stores",
     topics: [
       "NFS basics",
       "Cloud storage (S3/GFS/HDFS overview)",
-      "Caching and consistency"
+      "Caching and consistency in storage systems",
+      "Distributed File System architectures"
     ],
     readings: ["Coulouris Ch. 8"],
+    labDescription: "Distributed Storage. Explore distributed file systems. Starter code provided on GitHub."
   },
   {
     number: 12,
-    title: "Transactions",
+    title: "Distributed Transactions: Reliability and Atomicity",
     topics: [
-      "ACID, 2PC (high-level)",
-      "Locking/timestamp ordering"
+      "ACID properties in distributed systems",
+      "Two-Phase Commit (2PC) protocol",
+      "Locking and timestamp ordering",
+      "Concurrency control in transactions"
     ],
     readings: ["Coulouris Ch. 9"],
+    labDescription: "Distributed Transactions. Distributed transaction simulations. Starter code provided on GitHub."
   },
   {
     number: 13,
-    title: "Security Basics",
+    title: "Security: Authentication and Cryptographic Protocols",
     topics: [
-      "Authentication",
-      "Cryptography in distributed settings"
+      "Authentication and Authorization",
+      "Cryptography in distributed settings",
+      "Digital signatures and certificates",
+      "Secure communication channels (TLS/SSL)"
     ],
     readings: ["Coulouris Ch. 11 (Overview)"],
+    labDescription: "Security. Secure communication implementation. Starter code provided on GitHub."
   },
   {
     number: 14,
-    title: "Modern Topics",
+    title: "Scalability: Modern Cloud and Microservices Architectures",
     topics: [
-      "Cloud/microservices",
-      "MapReduce/Spark overview",
-      "Emerging: serverless, CRDTs"
+      "Cloud computing and microservices",
+      "MapReduce and Spark overview",
+      "Emerging trends: serverless, CRDTs",
+      "Load balancing and horizontal scaling"
     ],
     readings: ["MapReduce Whitepaper (High-level)"],
+    labDescription: "Modern Topics. MapReduce simulation in Python. Starter code provided on GitHub."
   },
   {
     number: 15,
-    title: "Projects & Review",
+    title: "Projects & Review: The Future of Distributed Systems",
     topics: [
       "Student project presentations",
-      "Course review"
+      "Course review and final wrap-up",
+      "Future directions in distributed systems",
+      "Career paths in systems engineering"
     ],
     readings: [],
+    labDescription: "Future Trends & Review. Final project wrap-up. Starter code provided on GitHub."
   }
 ];
 
@@ -187,7 +215,7 @@ export const labs: Lab[] = [
     title: "Sockets & Threads",
     difficulty: "Beginner",
     estimatedTime: "3 hours",
-    description: "Build a multi-threaded echo server using Python's socket and threading modules.",
+    description: "Build a multi-threaded echo server using Python's socket and threading modules. Very guided starter code provided. Modify this working example.",
     starterCodeUrl: "https://github.com/victordeman/distributed-systems/tree/main/labs/lab1"
   },
   {
@@ -196,7 +224,7 @@ export const labs: Lab[] = [
     title: "Simple RPC",
     difficulty: "Beginner",
     estimatedTime: "4 hours",
-    description: "Implement a basic Remote Procedure Call mechanism to understand serialization and network communication.",
+    description: "Implement a basic Remote Procedure Call mechanism to understand serialization and network communication. Starter code provided on GitHub.",
     starterCodeUrl: "https://github.com/victordeman/distributed-systems/tree/main/labs/lab2"
   },
   {
@@ -205,7 +233,7 @@ export const labs: Lab[] = [
     title: "Vector Clocks",
     difficulty: "Intermediate",
     estimatedTime: "5 hours",
-    description: "Implement vector clocks to track causality in a distributed system with multiple processes.",
+    description: "Implement vector clocks to track causality in a distributed system with multiple processes. Starter code provided on GitHub.",
     starterCodeUrl: "https://github.com/victordeman/distributed-systems/tree/main/labs/lab3"
   },
   {
@@ -214,7 +242,7 @@ export const labs: Lab[] = [
     title: "Replicated KV Store",
     difficulty: "Intermediate",
     estimatedTime: "6 hours",
-    description: "Create a key-value store that replicates data across nodes using simple primary-backup logic.",
+    description: "Create a key-value store that replicates data across nodes using simple primary-backup logic. Starter code provided on GitHub.",
     starterCodeUrl: "https://github.com/victordeman/distributed-systems/tree/main/labs/lab4"
   }
 ];
