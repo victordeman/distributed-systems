@@ -138,9 +138,9 @@ export default function SyllabusPage() {
                                     <text x="45" y="40" className="text-[10px] fill-current" textAnchor="middle">[1,0]</text>
                                     <circle cx="150" cy="150" r="5" fill="#10b981" />
                                     <text x="145" y="170" className="text-[10px] fill-current" textAnchor="middle">[1,1]</text>
-                                    <path d="M 50 50 L 150 150" stroke="#3b82f6" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
+                                    <path d="M 50 50 L 150 150" stroke="#3b82f6" strokeWidth="2" fill="none" markerEnd={`url(#arrow-${week.number})`} />
                                     <defs>
-                                      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                      <marker id={`arrow-${week.number}`} markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
                                         <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
                                       </marker>
                                     </defs>
