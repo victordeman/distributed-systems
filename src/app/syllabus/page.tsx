@@ -206,21 +206,23 @@ export default function SyllabusPage() {
                             </div>
                           </div>
 
-                          <div className="space-y-4 p-5 rounded-xl border-2 border-dashed bg-green-50/30 border-green-100 dark:bg-green-950/10 dark:border-green-900/30">
-                            <div className="flex items-center gap-2 font-bold text-green-700 dark:text-green-400">
-                              <LucideCode className="h-5 w-5" />
-                              Lab Activity
+                          {week.labDescription && (
+                            <div className="space-y-4 p-5 rounded-xl border-2 border-dashed bg-green-50/30 border-green-100 dark:bg-green-950/10 dark:border-green-900/30">
+                              <div className="flex items-center gap-2 font-bold text-green-700 dark:text-green-400">
+                                <LucideCode className="h-5 w-5" />
+                                Lab Activity
+                              </div>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                {week.labDescription}
+                              </p>
+                              <div className="flex items-center gap-2 pt-2">
+                                <Badge variant="outline" className="text-green-600 border-green-200 bg-white dark:bg-slate-900">
+                                  <LucideInfo className="h-3 w-3 mr-1" />
+                                  Starter code provided on GitHub
+                                </Badge>
+                              </div>
                             </div>
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                              {week.labDescription}
-                            </p>
-                            <div className="flex items-center gap-2 pt-2">
-                              <Badge variant="outline" className="text-green-600 border-green-200 bg-white dark:bg-slate-900">
-                                <LucideInfo className="h-3 w-3 mr-1" />
-                                Starter code provided on GitHub
-                              </Badge>
-                            </div>
-                          </div>
+                          )}
                         </div>
                       </div>
                     </AccordionContent>
