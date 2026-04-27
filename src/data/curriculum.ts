@@ -15,6 +15,7 @@ export interface Week {
   readings: string[];
   labDescription?: string;
   starterCodeNote?: string;
+  links?: { title: string; url: string; }[];
 }
 
 export interface CapstoneProject {
@@ -36,7 +37,13 @@ export const curriculum: Week[] = [
     ],
     readings: ["Coulouris Ch. 1", "OS/networks summaries"],
     labDescription: "Sockets & Threads. Build a multi-threaded echo server. Very guided starter code provided. Modify this working example. Starter code provided on GitHub.",
-    starterCodeNote: "Very guided starter code provided."
+    starterCodeNote: "Very guided starter code provided.",
+    links: [
+      {
+        title: "Week 1 Materials",
+        url: "https://github.com/victordeman/distributed-systems/blob/distributed-systems-course-site-3201933785043314310/links/week1"
+      }
+    ]
   },
   {
     number: 2,
