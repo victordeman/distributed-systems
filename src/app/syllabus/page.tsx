@@ -17,7 +17,8 @@ import {
   LucideClock,
   LucideCheckCircle,
   LucideDatabase,
-  LucideInfo
+  LucideInfo,
+  LucideLink
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -205,6 +206,28 @@ export default function SyllabusPage() {
                               )}
                             </div>
                           </div>
+
+                          {week.links && week.links.length > 0 && (
+                            <div className="space-y-4">
+                              <div className="flex items-center gap-2 font-semibold text-blue-500">
+                                <LucideLink className="h-4 w-4" />
+                                Course Links
+                              </div>
+                              <div className="flex flex-col gap-2">
+                                {week.links.map((link, i) => (
+                                  <a
+                                    key={i}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-blue-600 hover:underline flex items-center gap-1 w-fit"
+                                  >
+                                    {link.title}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          )}
 
                           {week.labDescription && (
                             <div className="space-y-4 p-5 rounded-xl border-2 border-dashed bg-green-50/30 border-green-100 dark:bg-green-950/10 dark:border-green-900/30">
