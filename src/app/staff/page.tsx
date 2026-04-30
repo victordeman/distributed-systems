@@ -17,16 +17,11 @@ export default function StaffPage() {
         {staff.map((member) => (
           <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
             <div className="relative aspect-[4/3] w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {staff.map((member) => (
-          <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
-            <div className="relative h-96 w-full">
               <Image
                 src={member.imageUrl}
                 alt={member.title}
                 fill
                 className="object-cover object-top"
-                className="object-cover"
               />
             </div>
             <CardHeader>
