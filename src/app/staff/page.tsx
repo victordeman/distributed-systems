@@ -13,6 +13,10 @@ export default function StaffPage() {
         </p>
       </div>
 
+      <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+        {staff.map((member) => (
+          <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
+            <div className="relative aspect-[4/3] w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {staff.map((member) => (
           <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
@@ -21,6 +25,7 @@ export default function StaffPage() {
                 src={member.imageUrl}
                 alt={member.title}
                 fill
+                className="object-cover object-top"
                 className="object-cover"
               />
             </div>
