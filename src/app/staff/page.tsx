@@ -17,6 +17,14 @@ export default function StaffPage() {
         {staff.map((member) => (
           <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
             <div className="flex flex-col md:flex-row">
+              <div className="relative md:w-1/4 aspect-[4/5] md:aspect-auto min-h-[250px] md:min-h-0">
+                <Image
+                  src={member.imageUrl}
+                  alt={member.title}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
               <div className="flex-1 flex flex-col">
                 <CardHeader>
                   <div className="flex items-center gap-2 text-primary font-semibold mb-1">
@@ -40,14 +48,6 @@ export default function StaffPage() {
                     </div>
                   )}
                 </CardContent>
-              </div>
-              <div className="relative md:w-1/4 aspect-[4/5] md:aspect-auto min-h-[250px] md:min-h-0">
-                <Image
-                  src={member.imageUrl}
-                  alt={member.title}
-                  fill
-                  className="object-cover object-top"
-                />
               </div>
             </div>
           </Card>
