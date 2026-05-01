@@ -13,39 +13,43 @@ export default function StaffPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+      <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
         {staff.map((member) => (
           <Card key={member.name} className="overflow-hidden border-2 transition-all hover:border-primary/50">
-            <div className="relative aspect-[4/3] w-full">
-              <Image
-                src={member.imageUrl}
-                alt={member.title}
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <CardHeader>
-              <div className="flex items-center gap-2 text-primary font-semibold mb-1">
-                <LucideUser className="h-4 w-4" />
-                {member.role}
-              </div>
-              <CardTitle className="text-2xl">{member.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {member.education && member.education.length > 0 && (
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 font-semibold text-sm text-muted-foreground uppercase tracking-wider">
-                    <LucideGraduationCap className="h-4 w-4" />
-                    Education
+            <div className="flex flex-col md:flex-row">
+              <div className="flex-1 flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center gap-2 text-primary font-semibold mb-1">
+                    <LucideUser className="h-4 w-4" />
+                    {member.role}
                   </div>
-                  <ul className="space-y-1 text-muted-foreground">
-                    {member.education.map((edu, i) => (
-                      <li key={i} className="text-sm">{edu}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </CardContent>
+                  <CardTitle className="text-2xl">{member.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1">
+                  {member.education && member.education.length > 0 && (
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 font-semibold text-sm text-muted-foreground uppercase tracking-wider">
+                        <LucideGraduationCap className="h-4 w-4" />
+                        Education
+                      </div>
+                      <ul className="space-y-1 text-muted-foreground">
+                        {member.education.map((edu, i) => (
+                          <li key={i} className="text-sm">{edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </CardContent>
+              </div>
+              <div className="relative md:w-1/4 aspect-[4/5] md:aspect-auto min-h-[250px] md:min-h-0">
+                <Image
+                  src={member.imageUrl}
+                  alt={member.title}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
           </Card>
         ))}
       </div>
