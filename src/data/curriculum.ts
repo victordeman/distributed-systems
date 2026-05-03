@@ -55,7 +55,13 @@ export const curriculum: Week[] = [
       "Encapsulation and layering"
     ],
     readings: ["Coulouris Ch. 2"],
-    labDescription: "Networking Basics. Continue with socket programming exercises. Starter code provided on GitHub."
+    labDescription: "Networking Basics. Continue with socket programming exercises. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 2 Materials",
+        url: "https://github.com/victordeman/distributed-systems/tree/distributed-systems-course-site-3201933785043314310/links/week2"
+      }
+    ]
   },
   {
     number: 3,
