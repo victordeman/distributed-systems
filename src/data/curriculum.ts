@@ -73,7 +73,13 @@ export const curriculum: Week[] = [
       "Idempotency in network operations"
     ],
     readings: ["Coulouris Ch. 2 (continued)", "Concurrency guide"],
-    labDescription: "Concurrency & Failure Models. Thread-safe data structures in Python. Starter code provided on GitHub."
+    labDescription: "Concurrency & Failure Models. Thread-safe data structures in Python. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 3 Materials",
+        url: "https://github.com/victordeman/distributed-systems/tree/distributed-systems-course-site-3201933785043314310/links/week3"
+      }
+    ]
   },
   {
     number: 4,
