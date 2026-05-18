@@ -91,7 +91,13 @@ export const curriculum: Week[] = [
       "Interface Definition Languages (IDLs)"
     ],
     readings: ["Coulouris Ch. 4"],
-    labDescription: "Remote Procedure Calls I. Build a basic RPC-style service in Python. Starter code provided on GitHub."
+    labDescription: "Remote Procedure Calls I. Build a basic RPC-style service in Python. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 4 Materials",
+        url: "https://github.com/victordeman/distributed-systems-main/tree/distributed-systems-course-site-3201933785043314310/links/week4"
+      }
+    ]
   },
   {
     number: 5,
