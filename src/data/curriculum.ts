@@ -127,7 +127,13 @@ export const curriculum: Week[] = [
       "Scalable naming systems"
     ],
     readings: ["Coulouris Ch. 5 (Light reading)"],
-    labDescription: "Naming & Directory Services. Implementing a basic directory service. Starter code provided on GitHub."
+    labDescription: "Naming & Directory Services. Implementing a basic directory service. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 6 Materials",
+        url: "https://github.com/victordeman/distributed-systems-main/tree/distributed-systems-course-site-3201933785043314310/links/week6"
+      }
+    ]
   },
   {
     number: 7,
