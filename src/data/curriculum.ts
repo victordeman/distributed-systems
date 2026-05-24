@@ -145,7 +145,13 @@ export const curriculum: Week[] = [
       "Causality and happens-before relationship"
     ],
     readings: ["Coulouris Ch. 6"],
-    labDescription: "Time & Logical Clocks. Implement vector clocks in Python. Starter code provided on GitHub."
+    labDescription: "Time & Logical Clocks. Implement vector clocks in Python. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 7 Materials",
+        url: "https://github.com/victordeman/distributed-systems-main/tree/distributed-systems-course-site-3201933785043314310/links/week7"
+      }
+    ]
   },
   {
     number: 8,
