@@ -109,7 +109,13 @@ export const curriculum: Week[] = [
       "Asynchronous message passing"
     ],
     readings: ["Coulouris Ch. 4 (continued)"],
-    labDescription: "Remote Procedure Calls II. Implement a simple pub-sub system. Starter code provided on GitHub."
+    labDescription: "Remote Procedure Calls II. Implement a simple pub-sub system. Starter code provided on GitHub.",
+    links: [
+      {
+        title: "Week 5 Materials",
+        url: "https://github.com/victordeman/distributed-systems-main/tree/distributed-systems-course-site-3201933785043314310/links/week5"
+      }
+    ]
   },
   {
     number: 6,
